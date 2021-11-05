@@ -28,11 +28,12 @@ public class TelefoneController {
         return new ResponseEntity<>(service.salvarTelefone(Telefone), HttpStatus.CREATED);
     }
 
-    @GetMapping("consultar/{id}")
+    @GetMapping("/consultar/{id}")
     public ResponseEntity<TelefoneDTO> consultarTelefone(@PathVariable final Long id) throws NaoEncontradoException {
         return ResponseEntity.ok(service.consultarTelefones(id));
     }
 
+    @GetMapping("/consultar")
     public ResponseEntity<List<TelefoneDTO>> consultarTelefones() throws NaoEncontradoException {
         return ResponseEntity.ok(service.consultarTelefones());
     }

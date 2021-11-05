@@ -29,12 +29,12 @@ public class PessoaController {
         return new ResponseEntity<>(service.salvarPessoa(pessoa), HttpStatus.CREATED);
     }
 
-    @GetMapping("consultar/{id}")
+    @GetMapping("/consultar/{id}")
     public ResponseEntity<PessoaDTO> consultarPessoa(@PathVariable final Long id) throws NaoEncontradoException {
         return ResponseEntity.ok(service.consultarPessoa(id));
     }
 
-    @GetMapping
+    @GetMapping("/consultar")
     public ResponseEntity<List<PessoaDTO>> consultarPessoas() throws NaoEncontradoException{
         return ResponseEntity.ok(service.consultarPessoas());
     }
