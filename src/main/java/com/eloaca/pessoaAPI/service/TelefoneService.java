@@ -10,7 +10,7 @@ public interface TelefoneService {
 
     TelefoneDTO salvarTelefone(final Telefone telefone);
 
-    TelefoneDTO consultarTelefones(final Long id) throws NaoEncontradoException;
+    TelefoneDTO consultarTelefone(final Long id) throws NaoEncontradoException;
 
     List<TelefoneDTO> consultarTelefones() throws NaoEncontradoException;
 }

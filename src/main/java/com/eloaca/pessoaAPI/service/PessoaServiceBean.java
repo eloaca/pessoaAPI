@@ -22,8 +22,7 @@ public class PessoaServiceBean implements PessoaService {
     @Override
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public PessoaDTO salvarPessoa(final Pessoa pessoa) {
-        var p = repository.save(pessoa);
-        return new PessoaDTO(pessoa);
+        return new PessoaDTO(repository.save(pessoa));
     }
 
     @Override

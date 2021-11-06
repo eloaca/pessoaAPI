@@ -26,7 +26,7 @@ public class TelefoneServiceBean implements TelefoneService {
     }
 
     @Override
-    public TelefoneDTO consultarTelefones(final Long id) throws NaoEncontradoException {
+    public TelefoneDTO consultarTelefone(final Long id) throws NaoEncontradoException {
        return new TelefoneDTO(repository.findById(id).orElseThrow(() -> new NaoEncontradoException(Telefone.class.getSimpleName())));
     }
 

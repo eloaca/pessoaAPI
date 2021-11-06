@@ -30,7 +30,7 @@ public class TelefoneController {
 
     @GetMapping("/consultar/{id}")
     public ResponseEntity<TelefoneDTO> consultarTelefone(@PathVariable final Long id) throws NaoEncontradoException {
-        return ResponseEntity.ok(service.consultarTelefones(id));
+        return ResponseEntity.ok(service.consultarTelefone(id));
     }
 
     @GetMapping("/consultar")
