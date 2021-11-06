@@ -1,4 +1,4 @@
-package com.eloaca.pessoaAPI.config;
+package com.eloaca.pessoaapi.config;
 
 import io.swagger.models.auth.In;
 import org.springframework.context.annotation.Bean;
@@ -54,12 +54,12 @@ public class SwaggerConfig {
     }
 
     private List<ResponseMessage> responseMessageForGET() {
-        return new ArrayList<>() {{
-            add(new ResponseMessageBuilder()
+        List<ResponseMessage> messages = new ArrayList<>();
+        messages.add(new ResponseMessageBuilder()
                     .code(404)
                     .message("404 Not Found")
                     .build());
-        }};
+        return messages;
     }
 
     private SecurityContext securityContext() {

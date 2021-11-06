@@ -1,7 +1,7 @@
-package com.eloaca.pessoaAPI.domain.dto;
+package com.eloaca.pessoaapi.domain.dto;
 
-import com.eloaca.pessoaAPI.domain.entitys.Telefone;
-import com.eloaca.pessoaAPI.domain.enums.TipoTelefone;
+import com.eloaca.pessoaapi.domain.entitys.Telefone;
+import com.eloaca.pessoaapi.domain.enums.TipoTelefone;
 import lombok.Getter;
 import lombok.Setter;
 

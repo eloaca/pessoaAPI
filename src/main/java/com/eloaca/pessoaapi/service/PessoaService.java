@@ -1,8 +1,8 @@
-package com.eloaca.pessoaAPI.service;
+package com.eloaca.pessoaapi.service;
 
-import com.eloaca.pessoaAPI.domain.dto.PessoaDTO;
-import com.eloaca.pessoaAPI.domain.entitys.Pessoa;
-import com.eloaca.pessoaAPI.exception.NaoEncontradoException;
+import com.eloaca.pessoaapi.domain.dto.PessoaDTO;
+import com.eloaca.pessoaapi.domain.entitys.Pessoa;
+import com.eloaca.pessoaapi.exception.NaoEncontradoException;
 
 import java.util.List;
 

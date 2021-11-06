@@ -1,11 +1,11 @@
-package com.eloaca.pessoaAPI.service;
+package com.eloaca.pessoaapi.service;
 
-import com.eloaca.pessoaAPI.domain.dto.PessoaDTO;
-import com.eloaca.pessoaAPI.domain.entitys.Pessoa;
-import com.eloaca.pessoaAPI.domain.entitys.Telefone;
-import com.eloaca.pessoaAPI.domain.enums.TipoTelefone;
-import com.eloaca.pessoaAPI.exception.NaoEncontradoException;
-import com.eloaca.pessoaAPI.repository.PessoaRepository;
+import com.eloaca.pessoaapi.domain.dto.PessoaDTO;
+import com.eloaca.pessoaapi.domain.entitys.Pessoa;
+import com.eloaca.pessoaapi.domain.entitys.Telefone;
+import com.eloaca.pessoaapi.domain.enums.TipoTelefone;
+import com.eloaca.pessoaapi.exception.NaoEncontradoException;
+import com.eloaca.pessoaapi.repository.PessoaRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

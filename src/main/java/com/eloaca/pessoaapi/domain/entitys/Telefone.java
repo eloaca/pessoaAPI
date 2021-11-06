@@ -1,6 +1,6 @@
-package com.eloaca.pessoaAPI.domain.entitys;
+package com.eloaca.pessoaapi.domain.entitys;
 
-import com.eloaca.pessoaAPI.domain.enums.TipoTelefone;
+import com.eloaca.pessoaapi.domain.enums.TipoTelefone;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

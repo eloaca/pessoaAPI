@@ -1,6 +1,6 @@
-package com.eloaca.pessoaAPI.repository;
+package com.eloaca.pessoaapi.repository;
 
-import com.eloaca.pessoaAPI.domain.entitys.Pessoa;
+import com.eloaca.pessoaapi.domain.entitys.Pessoa;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

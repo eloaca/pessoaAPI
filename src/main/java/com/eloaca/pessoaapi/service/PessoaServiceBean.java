@@ -1,9 +1,9 @@
-package com.eloaca.pessoaAPI.service;
+package com.eloaca.pessoaapi.service;
 
-import com.eloaca.pessoaAPI.domain.dto.PessoaDTO;
-import com.eloaca.pessoaAPI.domain.entitys.Pessoa;
-import com.eloaca.pessoaAPI.exception.NaoEncontradoException;
-import com.eloaca.pessoaAPI.repository.PessoaRepository;
+import com.eloaca.pessoaapi.domain.dto.PessoaDTO;
+import com.eloaca.pessoaapi.domain.entitys.Pessoa;
+import com.eloaca.pessoaapi.exception.NaoEncontradoException;
+import com.eloaca.pessoaapi.repository.PessoaRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

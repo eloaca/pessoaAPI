@@ -1,13 +1,11 @@
-package com.eloaca.pessoaAPI.domain.dto;
+package com.eloaca.pessoaapi.domain.dto;
 
-import com.eloaca.pessoaAPI.domain.entitys.Pessoa;
-import com.eloaca.pessoaAPI.domain.entitys.Telefone;
+import com.eloaca.pessoaapi.domain.entitys.Pessoa;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
