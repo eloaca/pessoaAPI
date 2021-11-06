@@ -5,7 +5,6 @@ import com.eloaca.pessoaAPI.domain.entitys.Telefone;
 import com.eloaca.pessoaAPI.domain.enums.TipoTelefone;
 import com.eloaca.pessoaAPI.exception.NaoEncontradoException;
 import com.eloaca.pessoaAPI.repository.TelefoneRepository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -56,23 +55,23 @@ class TelefoneServiceBeanTest {
     }
 
     @Test
-    void testeConsultarTelefoneENaoEncontrar() throws NaoEncontradoException {
+    void testeConsultarTelefoneENaoEncontrar() {
         Optional<Telefone> mock = Optional.empty();
         when(repository.findById(2L)).thenReturn(mock);
         NaoEncontradoException exception = assertThrows(
                 NaoEncontradoException.class,
-                () -> {bean.consultarTelefone(2L);}
+                () -> bean.consultarTelefone(2L)
         );
         assertEquals("Telefone Nao Encontrado", exception.getMessage());
     }
 
     @Test
-    void consultarTelefonesENaoEncontrar() throws NaoEncontradoException {
+    void consultarTelefonesENaoEncontrar() {
         List<Telefone> mocks = new ArrayList<>();
         when(repository.findAll()).thenReturn(mocks);
         NaoEncontradoException exception = assertThrows(
                 NaoEncontradoException.class,
-                () -> {bean.consultarTelefones();}
+                () -> bean.consultarTelefones()
         );
         assertEquals("Telefone Nao Encontrado", exception.getMessage());
     }

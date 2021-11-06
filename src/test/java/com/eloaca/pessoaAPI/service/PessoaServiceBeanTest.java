@@ -6,16 +6,16 @@ import com.eloaca.pessoaAPI.domain.entitys.Telefone;
 import com.eloaca.pessoaAPI.domain.enums.TipoTelefone;
 import com.eloaca.pessoaAPI.exception.NaoEncontradoException;
 import com.eloaca.pessoaAPI.repository.PessoaRepository;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -32,7 +32,6 @@ class PessoaServiceBeanTest {
 
     @InjectMocks
     private PessoaServiceBean bean;
-
 
     @Test
     void salvarPessoa() {
@@ -51,12 +50,12 @@ class PessoaServiceBeanTest {
     }
 
     @Test
-    void consultarPessoaENaoEncontrar() throws NaoEncontradoException {
-        Pessoa mock = null;
-        when(repository.findById(1L)).thenReturn(java.util.Optional.ofNullable(mock));
+    void consultarPessoaENaoEncontrar() {
+        Optional<Pessoa> mock = Optional.empty();
+        when(repository.findById(1L)).thenReturn(mock);
         NaoEncontradoException exception = assertThrows(
                 NaoEncontradoException.class,
-                () -> {bean.consultarPessoa(1L);}
+                () -> bean.consultarPessoa(1L)
         );
         assertEquals("Pessoa Nao Encontrado", exception.getMessage());
     }
@@ -71,12 +70,12 @@ class PessoaServiceBeanTest {
     }
 
     @Test
-    void consultarPessoasENaoEncontrar() throws NaoEncontradoException {
+    void consultarPessoasENaoEncontrar() {
         List<Pessoa> mocks = new ArrayList<>();
         when(repository.findAll()).thenReturn(mocks);
         NaoEncontradoException exception = assertThrows(
                 NaoEncontradoException.class,
-                () -> {bean.consultarPessoas();}
+                () -> bean.consultarPessoas()
         );
         assertEquals("Pessoa Nao Encontrado", exception.getMessage());
     }
@@ -89,10 +88,6 @@ class PessoaServiceBeanTest {
     }
 
     private Pessoa pessoaMock() {
-        return new Pessoa(1L, "Augusto", "Eloa", LocalDateTime.of(1996,01,24,18,30), telefonesMock());
-    }
-
-    private PessoaDTO pessoaDTOMock() {
-        return new PessoaDTO(pessoaMock());
+        return new Pessoa(1L, "Augusto", "Eloa", LocalDate.of(1996, 1,24), telefonesMock());
     }
 }

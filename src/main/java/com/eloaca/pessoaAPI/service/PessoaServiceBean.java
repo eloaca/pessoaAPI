@@ -15,12 +15,12 @@ import java.util.stream.Collectors;
 
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
+@Transactional(propagation = Propagation.REQUIRES_NEW)
 public class PessoaServiceBean implements PessoaService {
 
     final PessoaRepository repository;
 
     @Override
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public PessoaDTO salvarPessoa(final Pessoa pessoa) {
         return new PessoaDTO(repository.save(pessoa));
     }
