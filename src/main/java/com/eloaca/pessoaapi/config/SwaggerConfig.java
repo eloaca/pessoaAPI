@@ -32,7 +32,7 @@ public class SwaggerConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.eloaca.pessoaAPI.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.eloaca.pessoaapi.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .useDefaultResponseMessages(false)
